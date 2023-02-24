@@ -6,12 +6,12 @@ class TestFrenchToEnglish(unittest.TestCase):
     def test_frenchToEnglishHello(self):
         frenchText = 'bonjour'
         transatedText = translator.french_to_english(frenchText)
-        self.assertEquals(transatedText, "hello")
+        self.assertEqual(transatedText, "Hello")
 
     def test_frenchToEnglishGoodbye(self):
         frenchText = 'au revoir'
         transatedText = translator.french_to_english(frenchText)
-        self.assertEquals(transatedText, "goodbye")
+        self.assertEqual(transatedText, "Goodbye")
 
     def test_translateNull(self):
         frenchText = ''
@@ -23,12 +23,12 @@ class TestEnglishToFrench(unittest.TestCase):
     def test_englishToFrenchHello(self):
         englishText = 'hello'
         transatedText = translator.english_to_french(englishText)
-        self.assertEquals(transatedText, "bonjour")
+        self.assertEqual(transatedText, "Bonjour")
 
     def test_englishToFrenchGoodbye(self):
         englishText = 'goodbye'
         transatedText = translator.english_to_french(englishText)
-        self.assertEquals(transatedText, "au revoir")
+        self.assertEqual(transatedText, "Au revoir")
         
     def test_translateNull(self):
         englishText = ''
