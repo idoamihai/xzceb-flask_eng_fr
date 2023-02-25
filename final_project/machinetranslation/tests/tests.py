@@ -7,11 +7,13 @@ class TestFrenchToEnglish(unittest.TestCase):
         frenchText = 'Bonjour'
         transatedText = translator.french_to_english(frenchText)
         self.assertEqual(transatedText, "Hello")
+        self.assertNotEqual(transatedText, "H")
 
     def test_frenchToEnglishGoodbye(self):
         frenchText = 'Au revoir'
         transatedText = translator.french_to_english(frenchText)
         self.assertEqual(transatedText, "Goodbye")
+        self.assertNotEqual(transatedText, "H")
 
     def test_translateNull(self):
         frenchText = ''
