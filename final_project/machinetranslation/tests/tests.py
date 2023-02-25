@@ -26,11 +26,13 @@ class TestEnglishToFrench(unittest.TestCase):
         englishText = 'Hello'
         transatedText = translator.english_to_french(englishText)
         self.assertEqual(transatedText, "Bonjour")
+        self.assertNotEqual(transatedText, "H")
 
     def test_englishToFrenchGoodbye(self):
         englishText = 'Goodbye'
         transatedText = translator.english_to_french(englishText)
         self.assertEqual(transatedText, "Au revoir")
+        self.assertNotEqual(transatedText, "H")
         
     def test_translateNull(self):
         englishText = ''
